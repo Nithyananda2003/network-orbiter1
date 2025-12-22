@@ -143,14 +143,23 @@ const Header: React.FC = () => {
           <div className="flex items-center justify-between w-full">
             {/* Logo */}
            
-            <Link href="/" className="text-2xl font-bold text-green-600">
-             <Image src="/logo.png" alt="Network Orbiter Logo" width={45} height={45} className="inline-block mr-2"/>
-             Network Orbiter
+            <Link href="/" className="flex items-center text-2xl font-bold group">
+              <div className="bg-white p-1.5 rounded-lg shadow-md mr-3 flex items-center justify-center transition-transform group-hover:scale-105">
+                <Image 
+                  src="/logo.png" 
+                  alt="Network Orbiter Logo" 
+                  width={40} 
+                  height={40} 
+                  className="object-contain"
+                  priority 
+                />
+              </div>
+              <span className="text-green-600 tracking-tight">Network Orbiter</span>
             </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8" ref={dropdownRef}>
-              <Link href="/" className="text-white hover:text-green-600 transition">
+              <Link href="/" className="text-green-500 hover:text-green-400 font-medium transition">
                 Home
               </Link>
 
@@ -162,7 +171,7 @@ const Header: React.FC = () => {
               >
                 <Link
                   href="/solutions"
-                  className="text-white hover:text-green-600 transition flex items-center gap-1"
+                  className="text-green-500 hover:text-green-400 font-medium transition flex items-center gap-1"
                 >
                   Solutions
                   <svg
@@ -201,7 +210,7 @@ const Header: React.FC = () => {
               >
                 <Link
                   href="/products"
-                  className="text-white hover:text-green-600 transition flex items-center gap-1"
+                  className="text-green-500 hover:text-green-400 font-medium transition flex items-center gap-1"
                 >
                   Products
                   <svg
@@ -244,10 +253,10 @@ const Header: React.FC = () => {
                 )}
               </div>
 
-              <Link href="/about" className="text-white hover:text-green-600 transition">
+              <Link href="/about" className="text-green-500 hover:text-green-400 font-medium transition">
                 About
               </Link>
-              <Link href="/#demo-form" className="text-white hover:text-green-600 transition">
+              <Link href="/#demo-form" className="text-green-500 hover:text-green-400 font-medium transition">
           Contact
         </Link>
             </div>
@@ -306,7 +315,7 @@ const Header: React.FC = () => {
           <div className="flex-1 overflow-y-auto px-4 pb-4 space-y-2" ref={dropdownRef}>
             <Link
               href="/"
-              className="block py-2 text-white hover:text-green-500 transition"
+              className="block py-2 text-green-500 hover:text-green-400 font-medium transition"
               onClick={closeMobileMenu}
             >
               Home
@@ -316,7 +325,7 @@ const Header: React.FC = () => {
             <div>
               <button
                 onClick={() => handleDropdownClick('solutions')}
-                className="w-full flex items-center justify-between py-2 text-white hover:text-green-500 transition"
+                className="w-full flex items-center justify-between py-2 text-green-500 hover:text-green-400 font-medium transition"
               >
                 Solutions
                 <svg
@@ -335,7 +344,7 @@ const Header: React.FC = () => {
                     <Link
                       key={solution.navLabel}
                       href={`/solutions#${solution.id}`}
-                      className="block py-2 text-sm text-gray-300 hover:text-green-500 transition"
+                      className="block py-2 text-sm text-gray-400 hover:text-green-500 transition"
 >
                       {solution.navLabel}
                     </Link>
@@ -348,7 +357,7 @@ const Header: React.FC = () => {
             <div>
               <button
                 onClick={() => handleDropdownClick('products')}
-                className="w-full flex items-center justify-between py-2 text-white hover:text-green-500 transition"
+                className="w-full flex items-center justify-between py-2 text-green-500 hover:text-green-400 font-medium transition"
               >
                 Products
                 <svg
@@ -367,7 +376,7 @@ const Header: React.FC = () => {
                     <Link
                       key={category.id}
                       href={`/products#${category.id}`}
-                      className="block py-2 text-sm text-gray-300 hover:text-green-500 transition"
+                      className="block py-2 text-sm text-gray-400 hover:text-green-500 transition"
 >
                       {category.name}
                     </Link>
@@ -378,14 +387,14 @@ const Header: React.FC = () => {
 
             <Link
               href="/about"
-              className="block py-2 text-white hover:text-green-500 transition"
+              className="block py-2 text-green-500 hover:text-green-400 font-medium transition"
               onClick={closeMobileMenu}
             >
               About
             </Link>
             <Link
           href="/#demo-form"
-          className="block py-2 text-white hover:text-green-500 transition"
+          className="block py-2 text-green-500 hover:text-green-400 font-medium transition"
           onClick={closeMobileMenu}
         >
           Contact
