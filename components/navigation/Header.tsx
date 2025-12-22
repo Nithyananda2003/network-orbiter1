@@ -138,7 +138,7 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <header className="sticky top-0 z-50 h-20 bg-neutral-900 border-b border-neutral-800 shadow-lg" suppressHydrationWarning>
+      <header className="sticky top-0 z-50 h-20 bg-white border-b border-neutral-200 shadow-sm" suppressHydrationWarning>
         <nav className="container mx-auto px-4 h-full flex items-center" suppressHydrationWarning>
           <div className="flex items-center justify-between w-full">
             {/* Logo */}
@@ -187,12 +187,12 @@ const Header: React.FC = () => {
 
                 {/* Dropdown Menu */}
                 {activeDropdown === 'solutions' && (
-                  <div className="absolute top-full left-0 mt-2 w-80 bg-neutral-900 border border-neutral-800 rounded-md shadow-xl py-2 max-h-[70vh] overflow-y-auto z-50">
+                  <div className="absolute top-full left-0 mt-2 w-80 bg-white border border-neutral-200 rounded-md shadow-xl py-2 max-h-[70vh] overflow-y-auto z-50">
                     {solutions.map((solution) => (
                       <Link
                         key={solution.id}
                         href={`/solutions#${solution.id}`}
-                        className="block w-full text-left px-4 py-3 text-sm text-gray-300 hover:bg-green-500/10 hover:text-green-400 transition border-b border-neutral-800 last:border-0"
+                        className="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600 transition border-b border-neutral-100 last:border-0"
                         onClick={() => handleLinkClick(`/solutions#${solution.id}`)}
 >
                         {solution.navLabel}
@@ -226,13 +226,13 @@ const Header: React.FC = () => {
 
                 {/* Dropdown Menu */}
                 {activeDropdown === 'products' && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-neutral-900 border border-neutral-800 rounded-md shadow-xl py-2 max-h-[70vh] overflow-y-auto z-50">
+                <div className="absolute top-full left-0 mt-2 w-80 bg-white border border-neutral-200 rounded-md shadow-xl py-2 max-h-[70vh] overflow-y-auto z-50">
                     {productCategories.map((category) => (
                       <React.Fragment key={category.id}>
                         <Link
                           key={category.id}
                           href={`/products#${category.id}`}
-                          className="block w-full text-left px-4 py-3 text-sm text-gray-300 hover:bg-green-500/10 hover:text-green-400 transition border-b border-neutral-800 last:border-0"
+                          className="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600 transition border-b border-neutral-100 last:border-0"
                           onClick={() => handleLinkClick(`/products#${category.id}`)}
                         >
                           {category.name}
@@ -241,7 +241,7 @@ const Header: React.FC = () => {
                           <Link
                             key={product.id}
                             href={`/products#${product.id}`}
-                            className="block w-full text-left pl-8 pr-4 py-2 text-xs text-gray-400 hover:bg-green-500/10 hover:text-green-400 transition"
+                            className="block w-full text-left pl-8 pr-4 py-2 text-xs text-gray-500 hover:bg-green-50 hover:text-green-600 transition"
                             onClick={() => handleLinkClick(`/products#${product.id}`)}
                           >
                             {product.name}
@@ -264,7 +264,7 @@ const Header: React.FC = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMobileMenu}
-              className="lg:hidden text-gray-50 focus:outline-none"
+              className="lg:hidden text-green-600 focus:outline-none"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? (
@@ -292,17 +292,17 @@ const Header: React.FC = () => {
 
       {/* Mobile Navigation Drawer */}
       <div
-        className={`fixed top-0 right-0 h-full w-full bg-black shadow-xl z-50 transform transition-transform duration-300 ease-in-out lg:hidden ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`fixed top-0 right-0 h-full w-full bg-white shadow-xl z-50 transform transition-transform duration-300 ease-in-out lg:hidden ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
       >
-        <p className='py-10 px-3 text-white'>Network Orbiter</p>
+        <p className='py-10 px-6 text-green-600 font-bold text-xl'>Network Orbiter</p>
         <div className="flex flex-col h-full">
           
           {/* Close button */}
           <div className="flex justify-end absolute right-0 top-0 p-4">
             <button
               onClick={closeMobileMenu}
-              className="text-white hover:text-green-500 focus:outline-none"
+              className="text-green-600 hover:text-green-500 focus:outline-none"
               aria-label="Close menu"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -312,20 +312,20 @@ const Header: React.FC = () => {
           </div>
 
           {/* Menu Items */}
-          <div className="flex-1 overflow-y-auto px-4 pb-4 space-y-2" ref={dropdownRef}>
+          <div className="flex-1 overflow-y-auto px-6 pb-6 space-y-4" ref={dropdownRef}>
             <Link
               href="/"
-              className="block py-2 text-green-500 hover:text-green-400 font-medium transition"
+              className="block py-2 text-green-600 hover:text-green-500 font-semibold transition text-lg"
               onClick={closeMobileMenu}
             >
               Home
             </Link>
 
             {/* Mobile Dropdown 1 */}
-            <div>
+            <div className="border-b border-neutral-100 pb-2">
               <button
                 onClick={() => handleDropdownClick('solutions')}
-                className="w-full flex items-center justify-between py-2 text-green-500 hover:text-green-400 font-medium transition"
+                className="w-full flex items-center justify-between py-2 text-green-600 hover:text-green-500 font-semibold transition text-lg"
               >
                 Solutions
                 <svg
@@ -339,12 +339,12 @@ const Header: React.FC = () => {
                 </svg>
               </button>
               {activeDropdown === 'solutions' && (
-                <div className="pl-4 space-y-2 mt-2">
+                <div className="pl-4 space-y-3 mt-2">
                   {solutions.map((solution) => (
                     <Link
                       key={solution.navLabel}
                       href={`/solutions#${solution.id}`}
-                      className="block py-2 text-sm text-gray-400 hover:text-green-500 transition"
+                      className="block py-1 text-base text-gray-600 hover:text-green-600 transition"
 >
                       {solution.navLabel}
                     </Link>
@@ -354,10 +354,10 @@ const Header: React.FC = () => {
             </div>
 
             {/* Mobile Dropdown 2 */}
-            <div>
+            <div className="border-b border-neutral-100 pb-2">
               <button
                 onClick={() => handleDropdownClick('products')}
-                className="w-full flex items-center justify-between py-2 text-green-500 hover:text-green-400 font-medium transition"
+                className="w-full flex items-center justify-between py-2 text-green-600 hover:text-green-500 font-semibold transition text-lg"
               >
                 Products
                 <svg
@@ -371,12 +371,12 @@ const Header: React.FC = () => {
                 </svg>
               </button>
               {activeDropdown === 'products' && (
-                <div className="pl-4 space-y-2 mt-2">
+                <div className="pl-4 space-y-3 mt-2">
                   {productCategories.map((category) => (
                     <Link
                       key={category.id}
                       href={`/products#${category.id}`}
-                      className="block py-2 text-sm text-gray-400 hover:text-green-500 transition"
+                      className="block py-1 text-base text-gray-600 hover:text-green-600 transition"
 >
                       {category.name}
                     </Link>
@@ -387,14 +387,14 @@ const Header: React.FC = () => {
 
             <Link
               href="/about"
-              className="block py-2 text-green-500 hover:text-green-400 font-medium transition"
+              className="block py-2 text-green-600 hover:text-green-500 font-semibold transition text-lg"
               onClick={closeMobileMenu}
             >
               About
             </Link>
             <Link
           href="/#demo-form"
-          className="block py-2 text-green-500 hover:text-green-400 font-medium transition"
+          className="block py-2 text-green-600 hover:text-green-500 font-semibold transition text-lg"
           onClick={closeMobileMenu}
         >
           Contact
