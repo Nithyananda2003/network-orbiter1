@@ -138,9 +138,9 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <header className="sticky top-0 z-50 h-20 bg-neutral-900/80 backdrop-blur" suppressHydrationWarning>
-        <nav className="container mx-auto px-4 py-4" suppressHydrationWarning>
-          <div className="flex items-center justify-between">
+      <header className="sticky top-0 z-50 h-20 bg-neutral-900 border-b border-neutral-800 shadow-lg" suppressHydrationWarning>
+        <nav className="container mx-auto px-4 h-full flex items-center" suppressHydrationWarning>
+          <div className="flex items-center justify-between w-full">
             {/* Logo */}
            
             <Link href="/" className="text-2xl font-bold text-green-600">
