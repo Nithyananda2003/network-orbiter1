@@ -15,100 +15,52 @@ export const slugifyNavLabel = (label: string) => label.toLowerCase().replace(/[
 
 export const solutions: SolutionNavItem[] = [
   {
-    id: slugifyNavLabel('Long-Range Rural Connectivity'),
-    navLabel: 'Long-Range Rural Connectivity',
-    navShortText: 'High-capacity wireless links that extend connectivity across rural and remote regions.',
-    pageH1: 'Long-Range Rural Connectivity',
+    id: slugifyNavLabel('Wireless Transport/Backhaul'),
+    navLabel: 'Wireless Transport/Backhaul',
+    navShortText: 'High-throughput backhaul links for core and distribution networks.',
+    pageH1: 'Wireless Transport and Backhaul',
     headIntro:
-      'Network Orbiter delivers long-range rural connectivity using high-performance point-to-point and point-to-multipoint radios designed for extended distances. With high-gain antennas and advanced radio features, our systems provide stable links over many kilometers, enabling broadband access where wired infrastructure is difficult or uneconomical to deploy.',
+      'Network Orbiter’s high-performance radios are designed for wireless backhaul where capacity and reliability are critical. With throughput up to multi-gigabit levels and support for wide channel bandwidths, these solutions provide a strong alternative or complement to wired backhaul, enabling rapid deployment and scalable network growth.',
     datasheet: 'Datasheet_Oriter_XB Series',
-    icon: Route,
+    icon: Bolt,
   },
   {
-    id: slugifyNavLabel('High-Capacity Last-Mile Access'),
-    navLabel: 'High-Capacity Last-Mile Access',
-    navShortText: 'Deliver high-speed last-mile connectivity with carrier-grade wireless.',
-    pageH1: 'High-Capacity Last-Mile Access Infrastructure',
-    headIntro:
-      'Using Network Orbiter radios, service providers can build high-capacity last-mile access infrastructure that delivers reliable connectivity to end users. With support for high throughput and advanced QoS, these links ensure consistent performance for data, voice, and critical applications at the network edge.',
-    datasheet: 'Datasheet_Oriter_XB Series',
-    icon: Network,
-  },
-  {
-    id: slugifyNavLabel('Wi-Fi Backhaul for Public Areas & Parks'),
-    navLabel: 'Wi-Fi Backhaul for Public Areas & Parks',
-    navShortText: 'Wireless backhaul to support public Wi-Fi in open spaces.',
-    pageH1: 'Wi-Fi Backhaul for Public Areas and Parks',
-    headIntro:
-      'Network Orbiter solutions provide robust wireless backhaul for Wi-Fi deployments in public areas and parks. High-throughput radios and flexible networking features allow operators to aggregate Wi-Fi traffic and transport it securely over long distances, ensuring a consistent user experience in outdoor environments.',
-    datasheet: 'Datasheet_Oriter_XB Series',
-    icon: Waves,
-  },
-  {
-    id: slugifyNavLabel('Video Surveillance & Public Safety'),
-    navLabel: 'Video Surveillance & Public Safety',
-    navShortText: 'Wireless infrastructure for surveillance, traffic systems, and public safety networks.',
-    pageH1: 'Video Surveillance, Traffic Management and Public Safety Wireless Infrastructure',
-    headIntro:
-      'Network Orbiter platforms are ideal for building wireless infrastructure supporting video surveillance, traffic management, and public safety systems. High-capacity links and sectorized access options allow multiple video streams and control data to be carried reliably, with built-in QoS and security features to maintain service quality and protect critical traffic.',
-    datasheet: 'Datasheet_Oriter_XB Series',
-    icon: Shield,
-  },
-  {
-    id: slugifyNavLabel('WISP Access Infrastructure'),
-    navLabel: 'WISP Access Infrastructure',
+    id: slugifyNavLabel('WISP Access Networks'),
+    navLabel: 'WISP Access Networks',
     navShortText: 'End-to-end wireless access infrastructure for service providers.',
-    pageH1: 'WISP Access Infrastructure',
+    pageH1: 'WISP Access Networks',
     headIntro:
       'Wireless Internet Service Providers can use Network Orbiter radios and base stations to build scalable access infrastructure. With point-to-point and point-to-multipoint capabilities, integrated switching and routing, and advanced traffic management, WISPs can serve a wide range of subscribers while maintaining consistent performance and efficient spectrum usage.',
     datasheet: 'Datasheet_Oriter_XB Series',
     icon: Signal,
   },
   {
-    id: slugifyNavLabel('High-Performance Wireless Backhaul'),
-    navLabel: 'High-Performance Wireless Backhaul',
-    navShortText: 'High-throughput backhaul links for core and distribution networks.',
-    pageH1: 'High-Performance Wireless Backhaul',
+    id: slugifyNavLabel('Enterprise Private 5G'),
+    navLabel: 'Enterprise Private 5G',
+    navShortText: 'Secure, high-speed private cellular networks for enterprise operations.',
+    pageH1: 'Enterprise Private 5G Solutions',
     headIntro:
-      'Network Orbiter’s high-performance radios, including the XB Series, are designed for wireless backhaul where capacity and reliability are critical. With throughput up to multi-gigabit levels and support for wide channel bandwidths, these solutions provide a strong alternative or complement to wired backhaul, enabling rapid deployment and scalable network growth.',
+      'Network Orbiter delivers robust Enterprise Private 5G solutions tailored for mission-critical communications. Providing low latency, high reliability, and enhanced security, our private 5G infrastructure supports automation, dedicated connectivity, and seamless mobility within corporate campuses, factories, and logistics hubs.',
+    icon: Shield,
+  },
+  {
+    id: slugifyNavLabel('Smart City Networks'),
+    navLabel: 'Smart City Networks',
+    navShortText: 'Connected infrastructure for intelligent urban management and safety.',
+    pageH1: 'Smart City Network Infrastructure',
+    headIntro:
+      'Network Orbiter platforms support the backbone of Smart City initiatives, connecting traffic management systems, public Wi-Fi, environmental sensors, and video surveillance. Our high-capacity wireless links ensure real-time data transmission and robust connectivity essential for modern urban efficiency and public safety.',
     datasheet: 'Datasheet_Oriter_XB Series',
-    icon: Bolt,
+    icon: Network,
   },
   {
-    id: slugifyNavLabel('Outdoor Wireless for Harsh Environments'),
-    navLabel: 'Outdoor Wireless for Harsh Environments',
-    navShortText: 'Rugged wireless links built for demanding outdoor conditions.',
-    pageH1: 'Outdoor Wireless Links for Harsh Environments',
+    id: slugifyNavLabel('Industrial IoT Edge'),
+    navLabel: 'Industrial IoT Edge',
+    navShortText: 'Ruggedized connectivity for industrial automation and IoT data collection.',
+    pageH1: 'Industrial IoT Edge Connectivity',
     headIntro:
-      'Network Orbiter radios and antennas are engineered for harsh outdoor environments, with operating temperatures from –40°C to +60°C, IP66/IP67 protection, and wind survivability up to 200 kph. These characteristics make them suited for challenging locations where environmental conditions require durable, reliable wireless infrastructure.',
+      'Engineered for harsh industrial environments, Network Orbiter’s IoT Edge solutions provide reliable wireless links for automation, telemetry, and remote monitoring. Withstanding extreme temperatures and conditions, our systems ensure continuous data flow from the edge to the core, empowering predictive maintenance and operational intelligence.',
     datasheet: 'Orbiter NXG5-bSBS',
-    icon: Wind,
-  },
-  {
-    id: slugifyNavLabel('Multi-Sector Point-to-Multipoint'),
-    navLabel: 'Multi-Sector Point-to-Multipoint',
-    navShortText: 'Sector-based PTMP solutions for serving multiple remote sites.',
-    pageH1: 'Multi-Sector Point-to-Multipoint Wireless Networks',
-    headIntro:
-      'With sector base stations such as the NXG5-iSBS, NXG5-eSBS, and NXG5-bSBS, Network Orbiter enables point-to-multipoint connectivity for multiple remote locations. Integrated and beamforming antennas, combined with advanced MAC and QoS functions, allow efficient distribution of capacity across subscribers in a PTMP topology.',
     icon: Layers,
-  },
-  {
-    id: slugifyNavLabel('LAN & Multi-Radio Aggregation'),
-    navLabel: 'LAN & Multi-Radio Aggregation',
-    navShortText: 'Aggregation platforms for multiple wireless units and LAN segments.',
-    pageH1: 'LAN Aggregation and Multi-Radio Aggregation',
-    headIntro:
-      'The Orbiter Mint Switch and OS-MP Series switches provide aggregation for multiple wireless units and LAN devices. With multiple Gigabit Ethernet ports, native protocol support, and compact, fanless designs, these platforms are suited for consolidating traffic from radios and local networks, simplifying deployment and improving manageability.',
-    icon: Server,
-  },
-  {
-    id: slugifyNavLabel('Managed Wireless Networks'),
-    navLabel: 'Managed Wireless Networks',
-    navShortText: 'Umbrella category for centralized, enterprise-managed wireless operations.',
-    pageH1: 'Managed Wireless Networks',
-    headIntro:
-      'A comprehensive, enterprise-managed framework that ties together access, backhaul, aggregation, and monitoring into a unified operational model. Centralized policy enforcement, multi-site orchestration, and end-to-end visibility simplify lifecycle management while improving reliability and performance across diverse deployments.',
-    icon: Settings,
   },
 ];
